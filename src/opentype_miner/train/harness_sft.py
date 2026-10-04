@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import signal
+import sys
 from pathlib import Path
 from typing import Any
 
@@ -141,6 +143,38 @@ def train(args: argparse.Namespace) -> None:
         weight_decay=args.weight_decay,
     )
     vocab = int(getattr(getattr(model.config, "text_config", model.config), "vocab_size", 262144))
+    out_dir = Path(args.out)
+    stop = {"flag": False}
+
+    def _on_stop(signum: int, _frame: Any) -> None:
+        print(f"signal {signum}: will save adapter and exit after this step", flush=True)
+        stop["flag"] = True
+
+    signal.signal(signal.SIGTERM, _on_stop)
+    signal.signal(signal.SIGINT, _on_stop)
+
+    def save_adapter(step: int, *, tag: str = "") -> None:
+        out_dir.mkdir(parents=True, exist_ok=True)
+        model.save_pretrained(out_dir)
+        tokenizer.save_pretrained(out_dir)
+        (out_dir / "train_meta.json").write_text(
+            json.dumps(
+                {
+                    "kind": "harness_block_diffusion_lora",
+                    "arch": "DiffusionGemmaForBlockDiffusion",
+                    "base": f"{model_id}@{revision}",
+                    "steps": step,
+                    "canvas": CANVAS,
+                    "eps": args.eps,
+                    "tag": tag,
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+        print(f"saved adapter → {out_dir} (step={step}{', ' + tag if tag else ''})", flush=True)
+
+    save_every = int(getattr(args, "save_every", 0) or 0)
     step = 0
     for epoch in range(args.epochs):
         for batch in dl:
@@ -163,31 +197,15 @@ def train(args: argparse.Namespace) -> None:
             opt.step()
             step += 1
             if step % args.log_every == 0:
-                print(f"epoch={epoch} step={step} loss={float(loss):.4f}", flush=True)
-            if args.max_steps and step >= args.max_steps:
+                print(f"epoch={epoch} step={step} loss={float(loss.detach()):.4f}", flush=True)
+            if save_every and step % save_every == 0:
+                save_adapter(step, tag="checkpoint")
+            if stop["flag"] or (args.max_steps and step >= args.max_steps):
                 break
-        if args.max_steps and step >= args.max_steps:
+        if stop["flag"] or (args.max_steps and step >= args.max_steps):
             break
 
-    out_dir = Path(args.out)
-    out_dir.mkdir(parents=True, exist_ok=True)
-    model.save_pretrained(out_dir)
-    tokenizer.save_pretrained(out_dir)
-    (out_dir / "train_meta.json").write_text(
-        json.dumps(
-            {
-                "kind": "harness_block_diffusion_lora",
-                "arch": "DiffusionGemmaForBlockDiffusion",
-                "base": f"{model_id}@{revision}",
-                "steps": step,
-                "canvas": CANVAS,
-                "eps": args.eps,
-            },
-            indent=2,
-        )
-        + "\n"
-    )
-    print(f"saved adapter → {out_dir}", flush=True)
+    save_adapter(step, tag="final" if not stop["flag"] else "signal")
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -214,14 +232,22 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--gradient-checkpointing", action="store_true", default=True)
     p.add_argument("--no-gradient-checkpointing", action="store_false", dest="gradient_checkpointing")
     p.add_argument("--max-prompt-len", type=int, default=2048)
+    p.add_argument("--save-every", type=int, default=500, help="checkpoint adapter every N steps (0=off)")
     p.add_argument("--config", type=Path)
     args = p.parse_args(argv)
+    # YAML fills gaps only; explicit CLI flags always win (and null YAML keys are ignored).
+    cli_set: set[str] = set()
+    raw = list(argv) if argv is not None else sys.argv[1:]
+    for tok in raw:
+        if tok.startswith("--"):
+            cli_set.add(tok[2:].split("=", 1)[0].replace("-", "_"))
     if args.config and args.config.exists():
         cfg = yaml.safe_load(args.config.read_text()) or {}
         for k, v in cfg.items():
             key = k.replace("-", "_")
-            if hasattr(args, key):
-                setattr(args, key, v)
+            if v is None or not hasattr(args, key) or key in cli_set:
+                continue
+            setattr(args, key, v)
     train(args)
 
 

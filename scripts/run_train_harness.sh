@@ -31,4 +31,5 @@ exec python -m opentype_miner.train.harness_sft \
   --lora-alpha "${LORA_ALPHA:-128}" \
   --gradient-checkpointing \
   --max-prompt-len "${MAX_PROMPT_LEN:-2048}" \
+  --save-every "${SAVE_EVERY:-500}" \
   --max-steps "${HARNESS_MAX_STEPS:-2000}"

@@ -49,3 +49,60 @@
 2026-10-04T03:33:35: /workspace/opentype-miner/src/opentype_miner/train/harness_sft.py:166: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
 2026-10-04T03:33:35: Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
 2026-10-04T03:33:35:   print(f"epoch={epoch} step={step} loss={float(loss):.4f}", flush=True)
+2026-10-04T08:52:40: Traceback (most recent call last):
+2026-10-04T08:52:40:   File "<frozen runpy>", line 198, in _run_module_as_main
+2026-10-04T08:52:40:   File "<frozen runpy>", line 88, in _run_code
+2026-10-04T08:52:40:   File "/workspace/opentype-miner/src/opentype_miner/train/harness_sft.py", line 229, in <module>
+2026-10-04T08:52:40:     p.add_argument("--freeze-vision", action="store_true", default=True)
+2026-10-04T08:52:40:     ^^^^^^
+2026-10-04T08:52:40:   File "/workspace/opentype-miner/src/opentype_miner/train/harness_sft.py", line 225, in main
+2026-10-04T08:52:40:     p.add_argument("--lora-r", type=int, default=16)
+2026-10-04T08:52:40: 
+2026-10-04T08:52:40:   File "/workspace/opentype-miner/src/opentype_miner/train/harness_sft.py", line 161, in train
+2026-10-04T08:52:40:     json.dumps(
+2026-10-04T08:52:40:     ^^^^^^^^^^^^
+2026-10-04T08:52:40:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 631, in backward
+2026-10-04T08:52:40:     torch.autograd.backward(
+2026-10-04T08:52:40:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 381, in backward
+2026-10-04T08:52:40:     _engine_run_backward(
+2026-10-04T08:52:40:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 869, in _engine_run_backward
+2026-10-04T08:52:40:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-10-04T08:52:40:       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T08:52:40: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T08:52:40: ^^^^^^^^^^^^^^^^^^^^
+2026-10-04T08:52:40: 
+2026-10-04T08:55:25: Loading weights:   0%|          | 0/1047 [00:00<?, ?it/s]
+2026-10-04T08:55:26: Loading weights:   0%|          | 1/1047 [00:00<02:15,  7.70it/s]
+2026-10-04T08:55:26: Loading weights:   0%|          | 3/1047 [00:00<01:26, 12.06it/s]
+2026-10-04T08:55:26: Loading weights:   2%|▏         | 25/1047 [00:00<00:12, 79.20it/s]
+2026-10-04T08:55:26: Loading weights:   4%|▍         | 47/1047 [00:00<00:09, 105.84it/s]
+2026-10-04T08:55:26: Loading weights:   7%|▋         | 69/1047 [00:00<00:08, 122.05it/s]
+2026-10-04T08:55:26: Loading weights:   9%|▊         | 91/1047 [00:00<00:07, 131.86it/s]
+2026-10-04T08:55:26: Loading weights:  11%|█         | 113/1047 [00:01<00:06, 137.53it/s]
+2026-10-04T08:55:27: Loading weights:  13%|█▎        | 134/1047 [00:01<00:06, 137.94it/s]
+2026-10-04T08:55:27: Loading weights:  15%|█▍        | 156/1047 [00:01<00:06, 141.21it/s]
+2026-10-04T08:55:27: Loading weights:  17%|█▋        | 178/1047 [00:01<00:06, 144.39it/s]
+2026-10-04T08:55:27: Loading weights:  19%|█▉        | 200/1047 [00:01<00:05, 146.61it/s]
+2026-10-04T08:55:27: Loading weights:  21%|██        | 222/1047 [00:01<00:05, 144.20it/s]
+2026-10-04T08:55:27: Loading weights:  23%|██▎       | 244/1047 [00:01<00:05, 145.30it/s]
+2026-10-04T08:55:27: Loading weights:  25%|██▌       | 265/1047 [00:02<00:05, 143.99it/s]
+2026-10-04T08:55:28: Loading weights:  27%|██▋       | 287/1047 [00:02<00:05, 145.77it/s]
+2026-10-04T08:55:28: Loading weights:  30%|██▉       | 309/1047 [00:02<00:05, 146.90it/s]
+2026-10-04T08:55:28: Loading weights:  32%|███▏      | 331/1047 [00:02<00:04, 147.61it/s]
+2026-10-04T08:55:28: Loading weights:  34%|███▎      | 353/1047 [00:02<00:04, 147.88it/s]
+2026-10-04T08:55:28: Loading weights:  36%|███▌      | 375/1047 [00:02<00:04, 147.29it/s]
+2026-10-04T08:55:28: Loading weights:  38%|███▊      | 396/1047 [00:02<00:04, 144.98it/s]
+2026-10-04T08:55:29: Loading weights:  40%|███▉      | 418/1047 [00:03<00:04, 145.94it/s]
+2026-10-04T08:55:29: Loading weights:  42%|████▏     | 440/1047 [00:03<00:04, 147.57it/s]
+2026-10-04T08:55:29: Loading weights:  44%|████▍     | 462/1047 [00:03<00:03, 148.63it/s]
+2026-10-04T08:55:29: Loading weights:  46%|████▌     | 484/1047 [00:03<00:03, 149.18it/s]
+2026-10-04T08:55:29: Loading weights:  48%|████▊     | 506/1047 [00:03<00:03, 148.91it/s]
+2026-10-04T08:55:29: Loading weights:  50%|█████     | 527/1047 [00:03<00:03, 145.71it/s]
+2026-10-04T08:55:29: Loading weights:  52%|█████▏    | 549/1047 [00:03<00:03, 145.85it/s]
+2026-10-04T08:55:30: Loading weights:  55%|█████▍    | 571/1047 [00:04<00:03, 146.22it/s]
+2026-10-04T08:55:30: Loading weights:  57%|█████▋    | 593/1047 [00:04<00:03, 145.85it/s]
+2026-10-04T08:55:30: Loading weights:  59%|█████▊    | 615/1047 [00:04<00:02, 145.79it/s]
+2026-10-04T08:55:30: Loading weights:  61%|██████    | 637/1047 [00:04<00:02, 145.52it/s]
+2026-10-04T08:55:30: Loading weights:  69%|██████▉   | 727/1047 [00:04<00:01, 312.29it/s]
+2026-10-04T08:55:30: Loading weights:  86%|████████▌ | 899/1047 [00:04<00:00, 650.20it/s]
+2026-10-04T08:55:30: Loading weights: 100%|██████████| 1047/1047 [00:04<00:00, 215.14it/s]

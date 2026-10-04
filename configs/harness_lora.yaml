@@ -12,6 +12,8 @@ ar_weight: 0.1
 batch_size: 1
 max_length: 4096     # raise with longctx curriculum (8k→32k→64k→100k)
 epochs: 1
-max_steps: null
+# Leave unset so CLI --max-steps wins; do not set null (old loader overwrote CLI).
 log_every: 20
+save_every: 500
 freeze_vision: true
+
