@@ -49,9 +49,12 @@ module.exports = {
         CHAMPION_REPO: championRepo,
         CHAMPION_REV: championRev,
         READ_MAX_STEPS: process.env.READ_MAX_STEPS || "2000",
+        READ_DATA: process.env.READ_DATA || "data/public/decisions_l3.jsonl data/public/decisions_l4.jsonl",
+        READ_OUT: process.env.READ_OUT || "adapters/reads_lora",
       },
       out_file: path.join(root, "results", "pm2-reads.out.log"),
       error_file: path.join(root, "results", "pm2-reads.err.log"),
+
       merge_logs: true,
       time: true,
     },

@@ -290,3 +290,42 @@
 2026-10-04T02:30:45: /workspace/opentype-miner/src/opentype_miner/train/read_slot.py:225: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
 2026-10-04T02:30:45: Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
 2026-10-04T02:30:45:   print(f"epoch={epoch} step={step} loss={float(loss):.4f}", flush=True)
+2026-10-04T11:42:41: Loading weights:   0%|          | 0/1047 [00:00<?, ?it/s]
+2026-10-04T11:42:41: Loading weights:   0%|          | 1/1047 [00:00<02:17,  7.60it/s]
+2026-10-04T11:42:41: Loading weights:   0%|          | 3/1047 [00:00<01:27, 11.91it/s]
+2026-10-04T11:42:41: Loading weights:   2%|▏         | 25/1047 [00:00<00:13, 78.38it/s]
+2026-10-04T11:42:41: Loading weights:   4%|▍         | 47/1047 [00:00<00:09, 106.32it/s]
+2026-10-04T11:42:41: Loading weights:   7%|▋         | 69/1047 [00:00<00:08, 122.12it/s]
+2026-10-04T11:42:41: Loading weights:   9%|▊         | 91/1047 [00:00<00:07, 131.68it/s]
+2026-10-04T11:42:42: Loading weights:  11%|█         | 113/1047 [00:01<00:06, 136.09it/s]
+2026-10-04T11:42:42: Loading weights:  13%|█▎        | 134/1047 [00:01<00:06, 136.86it/s]
+2026-10-04T11:42:42: Loading weights:  15%|█▍        | 156/1047 [00:01<00:06, 140.13it/s]
+2026-10-04T11:42:42: Loading weights:  17%|█▋        | 178/1047 [00:01<00:06, 143.43it/s]
+2026-10-04T11:42:42: Loading weights:  19%|█▉        | 200/1047 [00:01<00:05, 145.35it/s]
+2026-10-04T11:42:42: Loading weights:  21%|██        | 222/1047 [00:01<00:05, 144.34it/s]
+2026-10-04T11:42:43: Loading weights:  23%|██▎       | 244/1047 [00:01<00:05, 143.59it/s]
+2026-10-04T11:42:43: Loading weights:  25%|██▌       | 265/1047 [00:02<00:05, 142.45it/s]
+2026-10-04T11:42:43: Loading weights:  27%|██▋       | 287/1047 [00:02<00:05, 144.30it/s]
+2026-10-04T11:42:43: Loading weights:  30%|██▉       | 309/1047 [00:02<00:05, 145.47it/s]
+2026-10-04T11:42:43: Loading weights:  32%|███▏      | 331/1047 [00:02<00:04, 146.03it/s]
+2026-10-04T11:42:43: Loading weights:  34%|███▎      | 353/1047 [00:02<00:04, 146.55it/s]
+2026-10-04T11:42:43: Loading weights:  36%|███▌      | 375/1047 [00:02<00:04, 144.74it/s]
+2026-10-04T11:42:44: Loading weights:  38%|███▊      | 396/1047 [00:02<00:04, 142.71it/s]
+2026-10-04T11:42:44: Loading weights:  40%|███▉      | 418/1047 [00:03<00:04, 144.06it/s]
+2026-10-04T11:42:44: Loading weights:  42%|████▏     | 440/1047 [00:03<00:04, 145.82it/s]
+2026-10-04T11:42:44: Loading weights:  44%|████▍     | 462/1047 [00:03<00:03, 147.17it/s]
+2026-10-04T11:42:44: Loading weights:  46%|████▌     | 483/1047 [00:03<00:03, 158.38it/s]
+2026-10-04T11:42:44: Loading weights:  48%|████▊     | 503/1047 [00:03<00:03, 167.56it/s]
+2026-10-04T11:42:44: Loading weights:  50%|████▉     | 521/1047 [00:03<00:03, 151.03it/s]
+2026-10-04T11:42:45: Loading weights:  51%|█████▏    | 537/1047 [00:03<00:03, 136.34it/s]
+2026-10-04T11:42:45: Loading weights:  53%|█████▎    | 552/1047 [00:04<00:03, 125.71it/s]
+2026-10-04T11:42:45: Loading weights:  55%|█████▍    | 571/1047 [00:04<00:03, 126.62it/s]
+2026-10-04T11:42:45: Loading weights:  57%|█████▋    | 593/1047 [00:04<00:03, 132.73it/s]
+2026-10-04T11:42:45: Loading weights:  59%|█████▊    | 615/1047 [00:04<00:03, 136.40it/s]
+2026-10-04T11:42:45: Loading weights:  61%|██████    | 637/1047 [00:04<00:02, 139.41it/s]
+2026-10-04T11:42:45: Loading weights:  70%|██████▉   | 728/1047 [00:04<00:01, 311.73it/s]
+2026-10-04T11:42:45: Loading weights:  85%|████████▌ | 894/1047 [00:04<00:00, 638.33it/s]
+2026-10-04T11:42:46: Loading weights: 100%|██████████| 1047/1047 [00:04<00:00, 211.18it/s]
+2026-10-04T11:43:11: /workspace/opentype-miner/src/opentype_miner/train/read_slot.py:225: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+2026-10-04T11:43:11: Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+2026-10-04T11:43:11:   print(f"epoch={epoch} step={step} loss={float(loss):.4f}", flush=True)
