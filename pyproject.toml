@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "opentype-miner"
+version = "0.1.0"
+description = "Fine-tuning stack for the Cortex OpenType challenge (DiffusionGemma)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "opentype-challenge[miner] @ file:///workspace/cortex/challenge",
+  "pyyaml>=6,<7",
+  "httpx>=0.28,<1",
+  "rich>=13,<16",
+  "safetensors>=0.4",
+  "huggingface_hub>=0.30",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project.optional-dependencies]
+# Install torch from the CUDA index first (see scripts/install_train.sh), then this extra.
+# Do not point --index-url at download.pytorch.org for this extra — that registry has no
+# transformers and can pin stale transitive wheels (requests).
+train = [
+  "torch>=2.6",
+  "transformers>=4.56",
+  "accelerate>=1.0",
+  "peft>=0.15",
+  "bitsandbytes>=0.45",  # QLoRA 4-bit base (required on 1×96GB)
+  "sentencepiece>=0.2",
+  "protobuf>=5",
+  "pybase64>=1.4",  # required by pinned vendor/structured_server.py
+]
+dev = ["pytest>=8,<10", "ruff>=0.9"]
+
+[project.scripts]
+opentype-miner = "opentype_miner.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/opentype_miner"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

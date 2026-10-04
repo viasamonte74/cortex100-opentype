@@ -1,0 +1,59 @@
+# Drop-in for NeMo AutoModel when available (8×GPU, EP=8).
+# Run from a NeMo Automodel checkout:
+#   torchrun --standalone --nproc-per-node=8 examples/dllm_sft/finetune.py \
+#     -c /workspace/opentype-miner/configs/nemo_harness_lora.yaml
+#
+# Point path_or_dataset_id at chat_*.jsonl produced by:
+#   opentype-miner data oracle-chat --in data/public --out data/public/chat
+
+recipe: DiffusionGemmaSFTRecipe
+
+model:
+  _target_: nemo_automodel.NeMoAutoModelForCausalLM.from_pretrained
+  pretrained_model_name_or_path: google/diffusiongemma-26B-A4B-it  # replace with champion
+  torch_dtype: float32
+  canvas_length: 256
+  self_conditioning: true
+  freeze_router: true
+
+distributed:
+  strategy: fsdp2
+  ep_size: 8
+  activation_checkpointing: true
+  mp_policy:
+    param_dtype: bfloat16
+    reduce_dtype: float32
+    output_dtype: float32
+    autocast_dtype: bfloat16
+
+dllm:
+  mode: block_diffusion
+  block_size: 256
+  vocab_size: 262144
+  eps: 0.001
+  pad_block_size: 256
+  pad_seq_len_divisible: 256
+
+# peft / LoRA: use NeMo's diffusion_gemma_lora.yaml targets (attn + dense MLP)
+# and keep vision frozen or 0.1× LR outside this stub.
+
+dataset:
+  _target_: nemo_automodel.components.datasets.llm.chat_dataset.ChatDataset
+  path_or_dataset_id: /workspace/opentype-miner/data/public/chat/chat_ops.jsonl
+  split: train
+  shuffle_seed: 42
+  seq_length: 4096
+  truncation: true
+  unshifted: true
+  mask_history: true
+  tokenizer:
+    pretrained_model_name_or_path: google/diffusiongemma-26B-A4B-it
+
+step_scheduler:
+  max_steps: 2000
+  grad_clip: 1.0
+
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: 1.0e-4
+  weight_decay: 0.01

@@ -1,0 +1,14 @@
+# Read-slot LoRA (attn + dense MLP; router frozen; vision frozen)
+model: null          # set to champion HF repo
+revision: null       # champion commit
+lr: 1.0e-4
+weight_decay: 0.01
+clip: 1.0
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+mass_weight: 0.2
+epochs: 1
+max_steps: null
+log_every: 20
+freeze_vision: true

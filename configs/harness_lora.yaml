@@ -1,0 +1,17 @@
+# Harness block-diffusion LoRA
+model: null          # set to champion HF repo
+revision: null
+lr: 1.0e-4
+weight_decay: 0.01
+clip: 1.0
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+eps: 0.001
+ar_weight: 0.1
+batch_size: 1
+max_length: 4096     # raise with longctx curriculum (8k→32k→64k→100k)
+epochs: 1
+max_steps: null
+log_every: 20
+freeze_vision: true

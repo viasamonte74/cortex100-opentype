@@ -1,0 +1,292 @@
+2026-10-04T02:08:53: Loading weights:   0%|          | 0/1047 [00:00<?, ?it/s]
+2026-10-04T02:08:53: Loading weights:   0%|          | 3/1047 [00:00<01:02, 16.72it/s]
+2026-10-04T02:08:53: Loading weights:   2%|▏         | 25/1047 [00:00<00:12, 79.65it/s]
+2026-10-04T02:08:54: Loading weights:   4%|▍         | 47/1047 [00:00<00:09, 102.94it/s]
+2026-10-04T02:08:54: Loading weights:   7%|▋         | 69/1047 [00:00<00:08, 114.91it/s]
+2026-10-04T02:08:54: Loading weights:   9%|▊         | 91/1047 [00:00<00:08, 119.10it/s]
+2026-10-04T02:08:54: Loading weights:  11%|█         | 113/1047 [00:01<00:07, 123.82it/s]
+2026-10-04T02:08:54: Loading weights:  13%|█▎        | 134/1047 [00:01<00:07, 124.11it/s]
+2026-10-04T02:08:54: Loading weights:  15%|█▍        | 155/1047 [00:01<00:06, 128.06it/s]
+2026-10-04T02:08:55: Loading weights:  17%|█▋        | 178/1047 [00:01<00:06, 131.13it/s]
+2026-10-04T02:08:55: Loading weights:  19%|█▉        | 199/1047 [00:01<00:06, 131.67it/s]
+2026-10-04T02:08:55: Loading weights:  21%|██        | 222/1047 [00:01<00:06, 130.59it/s]
+2026-10-04T02:08:55: Loading weights:  23%|██▎       | 244/1047 [00:02<00:06, 127.28it/s]
+2026-10-04T02:08:55: Loading weights:  25%|██▌       | 265/1047 [00:02<00:06, 126.52it/s]
+2026-10-04T02:08:55: Loading weights:  27%|██▋       | 287/1047 [00:02<00:05, 132.42it/s]
+2026-10-04T02:08:56: Loading weights:  30%|██▉       | 309/1047 [00:02<00:05, 133.58it/s]
+2026-10-04T02:08:56: Loading weights:  32%|███▏      | 331/1047 [00:02<00:05, 128.02it/s]
+2026-10-04T02:08:56: Loading weights:  34%|███▎      | 352/1047 [00:02<00:05, 124.04it/s]
+2026-10-04T02:08:56: Loading weights:  36%|███▌      | 375/1047 [00:03<00:05, 126.28it/s]
+2026-10-04T02:08:56: Loading weights:  38%|███▊      | 396/1047 [00:03<00:05, 125.44it/s]
+2026-10-04T02:08:57: Loading weights:  40%|███▉      | 418/1047 [00:03<00:04, 127.56it/s]
+2026-10-04T02:08:57: Loading weights:  42%|████▏     | 440/1047 [00:03<00:04, 125.81it/s]
+2026-10-04T02:08:57: Loading weights:  44%|████▍     | 462/1047 [00:03<00:04, 126.79it/s]
+2026-10-04T02:08:57: Loading weights:  46%|████▌     | 484/1047 [00:03<00:04, 124.59it/s]
+2026-10-04T02:08:57: Loading weights:  48%|████▊     | 505/1047 [00:04<00:04, 124.16it/s]
+2026-10-04T02:08:57: Loading weights:  50%|█████     | 527/1047 [00:04<00:04, 124.71it/s]
+2026-10-04T02:08:58: Loading weights:  52%|█████▏    | 549/1047 [00:04<00:03, 126.38it/s]
+2026-10-04T02:08:58: Loading weights:  55%|█████▍    | 571/1047 [00:04<00:03, 127.50it/s]
+2026-10-04T02:08:58: Loading weights:  57%|█████▋    | 593/1047 [00:04<00:03, 129.13it/s]
+2026-10-04T02:08:58: Loading weights:  59%|█████▊    | 615/1047 [00:04<00:03, 125.59it/s]
+2026-10-04T02:08:58: Loading weights:  61%|██████    | 637/1047 [00:05<00:03, 123.37it/s]
+2026-10-04T02:08:58: Loading weights:  78%|███████▊  | 813/1047 [00:05<00:00, 440.96it/s]
+2026-10-04T02:08:58: Loading weights:  94%|█████████▎| 980/1047 [00:05<00:00, 707.06it/s]
+2026-10-04T02:08:59: Loading weights: 100%|██████████| 1047/1047 [00:05<00:00, 194.19it/s]
+2026-10-04T02:09:20: /workspace/opentype-miner/src/opentype_miner/train/read_slot.py:220: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+2026-10-04T02:09:20: Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+2026-10-04T02:09:20:   print(f"epoch={epoch} step={step} loss={float(loss):.4f}", flush=True)
+2026-10-04T02:10:00: Traceback (most recent call last):
+2026-10-04T02:10:00:   File "<frozen runpy>", line 198, in _run_module_as_main
+2026-10-04T02:10:00:   File "<frozen runpy>", line 88, in _run_code
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 343, in <module>
+2026-10-04T02:10:00:     main()
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 325, in main
+2026-10-04T02:10:00:     train_offline(args)
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 189, in train_offline
+2026-10-04T02:10:00:     out = model(
+2026-10-04T02:10:00:           ^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+2026-10-04T02:10:00:     return self._call_impl(*args, **kwargs)
+2026-10-04T02:10:00: ^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+2026-10-04T02:10:00:     return forward_call(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/peft/peft_model.py", line 1007, in forward
+2026-10-04T02:10:00:     return self.get_base_model()(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+2026-10-04T02:10:00:     return self._call_impl(*args, **kwargs)
+2026-10-04T02:10:00:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+2026-10-04T02:10:00:     return forward_call(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 939, in wrapper
+2026-10-04T02:10:00:     output = func(self, *args, **kwargs)
+2026-10-04T02:10:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/models/diffusion_gemma/modeling_diffusion_gemma.py", line 1647, in forward
+2026-10-04T02:10:00:     model_outputs = self.model(
+2026-10-04T02:10:00:               ^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+2026-10-04T02:10:00:     return self._call_impl(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+2026-10-04T02:10:00:     return forward_call(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 939, in wrapper
+2026-10-04T02:10:00:     output = func(self, *args, **kwargs)
+2026-10-04T02:10:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/models/diffusion_gemma/modeling_diffusion_gemma.py", line 1543, in forward
+2026-10-04T02:10:00:     encoder_outputs = self.encoder(
+2026-10-04T02:10:00:             ^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+2026-10-04T02:10:00:     return self._call_impl(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+2026-10-04T02:10:00:     return forward_call(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 1068, in wrapper
+2026-10-04T02:10:00:     output = func(self, *args, **kwargs)
+2026-10-04T02:10:00:              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 939, in wrapper
+2026-10-04T02:10:00:     output = func(self, *args, **kwargs)
+2026-10-04T02:10:00: ^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/models/diffusion_gemma/modeling_diffusion_gemma.py", line 1132, in forward
+2026-10-04T02:10:00:     outputs = self.language_model(
+2026-10-04T02:10:00: ^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+2026-10-04T02:10:00:     return self._call_impl(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+2026-10-04T02:10:00:     return forward_call(*args, **kwargs)
+2026-10-04T02:10:00:  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/utils/generic.py", line 1068, in wrapper
+2026-10-04T02:10:00:     output = func(self, *args, **kwargs)
+2026-10-04T02:10:00:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/utils/output_capturing.py", line 287, in wrapper
+2026-10-04T02:10:00:     outputs = func(self, *args, **kwargs)
+2026-10-04T02:10:00:               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/models/diffusion_gemma/modeling_diffusion_gemma.py", line 969, in forward
+2026-10-04T02:10:00:     hidden_states = encoder_layer(
+2026-10-04T02:10:00:                     ^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+2026-10-04T02:10:00:     return self._call_impl(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+2026-10-04T02:10:00:     return forward_call(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/models/diffusion_gemma/modeling_diffusion_gemma.py", line 654, in forward
+2026-10-04T02:10:00:     _, top_k_weights, top_k_index = self.router(hidden_states_2_for_routing)
+2026-10-04T02:10:00: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+2026-10-04T02:10:00:     return self._call_impl(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+2026-10-04T02:10:00:     return forward_call(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/transformers/models/diffusion_gemma/modeling_diffusion_gemma.py", line 533, in forward
+2026-10-04T02:10:00:     expert_scores = self.proj(hidden_states)  # [B*S, E]
+2026-10-04T02:10:00: ^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1779, in _wrapped_call_impl
+2026-10-04T02:10:00:     return self._call_impl(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1790, in _call_impl
+2026-10-04T02:10:00:     return forward_call(*args, **kwargs)
+2026-10-04T02:10:00:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/linear.py", line 134, in forward
+2026-10-04T02:10:00:     return F.linear(input, self.weight, self.bias)
+2026-10-04T02:10:00:                                         ^^^^^^^^^
+2026-10-04T02:10:00:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1955, in __getattr__
+2026-10-04T02:10:00:     def __getattr__(self, name: str) -> Union[Tensor, "Module"]:
+2026-10-04T02:10:00: 
+2026-10-04T02:10:00: KeyboardInterrupt
+2026-10-04T02:16:04: Loading weights:   0%|          | 0/1047 [00:00<?, ?it/s]
+2026-10-04T02:16:04: Loading weights:   0%|          | 1/1047 [00:00<02:13,  7.83it/s]
+2026-10-04T02:16:04: Loading weights:   0%|          | 3/1047 [00:00<01:25, 12.21it/s]
+2026-10-04T02:16:04: Loading weights:   2%|▏         | 25/1047 [00:00<00:12, 80.30it/s]
+2026-10-04T02:16:04: Loading weights:   4%|▍         | 47/1047 [00:00<00:09, 107.50it/s]
+2026-10-04T02:16:04: Loading weights:   7%|▋         | 69/1047 [00:00<00:07, 124.04it/s]
+2026-10-04T02:16:05: Loading weights:   9%|▊         | 91/1047 [00:00<00:07, 133.96it/s]
+2026-10-04T02:16:05: Loading weights:  11%|█         | 113/1047 [00:00<00:06, 137.90it/s]
+2026-10-04T02:16:05: Loading weights:  13%|█▎        | 134/1047 [00:01<00:06, 138.97it/s]
+2026-10-04T02:16:05: Loading weights:  15%|█▍        | 156/1047 [00:01<00:06, 142.59it/s]
+2026-10-04T02:16:05: Loading weights:  17%|█▋        | 178/1047 [00:01<00:05, 146.02it/s]
+2026-10-04T02:16:05: Loading weights:  19%|█▉        | 200/1047 [00:01<00:05, 148.41it/s]
+2026-10-04T02:16:05: Loading weights:  21%|██        | 222/1047 [00:01<00:05, 146.07it/s]
+2026-10-04T02:16:06: Loading weights:  23%|██▎       | 244/1047 [00:01<00:05, 144.10it/s]
+2026-10-04T02:16:06: Loading weights:  25%|██▌       | 265/1047 [00:02<00:05, 143.86it/s]
+2026-10-04T02:16:06: Loading weights:  27%|██▋       | 287/1047 [00:02<00:05, 146.13it/s]
+2026-10-04T02:16:06: Loading weights:  30%|██▉       | 309/1047 [00:02<00:04, 147.81it/s]
+2026-10-04T02:16:06: Loading weights:  32%|███▏      | 331/1047 [00:02<00:04, 148.85it/s]
+2026-10-04T02:16:06: Loading weights:  34%|███▎      | 353/1047 [00:02<00:04, 149.54it/s]
+2026-10-04T02:16:06: Loading weights:  36%|███▌      | 375/1047 [00:02<00:04, 145.96it/s]
+2026-10-04T02:16:07: Loading weights:  38%|███▊      | 396/1047 [00:02<00:04, 144.71it/s]
+2026-10-04T02:16:07: Loading weights:  40%|███▉      | 418/1047 [00:03<00:04, 146.24it/s]
+2026-10-04T02:16:07: Loading weights:  42%|████▏     | 440/1047 [00:03<00:04, 148.47it/s]
+2026-10-04T02:16:07: Loading weights:  44%|████▍     | 462/1047 [00:03<00:03, 149.98it/s]
+2026-10-04T02:16:07: Loading weights:  46%|████▌     | 484/1047 [00:03<00:03, 150.69it/s]
+2026-10-04T02:16:07: Loading weights:  48%|████▊     | 506/1047 [00:03<00:03, 147.49it/s]
+2026-10-04T02:16:07: Loading weights:  50%|█████     | 527/1047 [00:03<00:03, 146.24it/s]
+2026-10-04T02:16:08: Loading weights:  52%|█████▏    | 549/1047 [00:03<00:03, 147.94it/s]
+2026-10-04T02:16:08: Loading weights:  55%|█████▍    | 571/1047 [00:04<00:03, 148.93it/s]
+2026-10-04T02:16:08: Loading weights:  57%|█████▋    | 593/1047 [00:04<00:03, 149.31it/s]
+2026-10-04T02:16:08: Loading weights:  59%|█████▊    | 615/1047 [00:04<00:02, 149.77it/s]
+2026-10-04T02:16:08: Loading weights:  61%|██████    | 637/1047 [00:04<00:02, 150.13it/s]
+2026-10-04T02:16:08: Loading weights:  69%|██████▉   | 722/1047 [00:04<00:01, 307.94it/s]
+2026-10-04T02:16:08: Loading weights:  86%|████████▌ | 897/1047 [00:04<00:00, 659.45it/s]
+2026-10-04T02:16:09: Loading weights: 100%|██████████| 1047/1047 [00:04<00:00, 217.18it/s]
+2026-10-04T02:16:32: /workspace/opentype-miner/src/opentype_miner/train/read_slot.py:225: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+2026-10-04T02:16:32: Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+2026-10-04T02:16:32:   print(f"epoch={epoch} step={step} loss={float(loss):.4f}", flush=True)
+2026-10-04T02:23:48: Traceback (most recent call last):
+2026-10-04T02:23:48:   File "<frozen runpy>", line 198, in _run_module_as_main
+2026-10-04T02:23:48:   File "<frozen runpy>", line 88, in _run_code
+2026-10-04T02:23:48:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 355, in <module>
+2026-10-04T02:23:48:     r = httpx.post(args.reader.rstrip("/") + "/v1/systemone", json=body, timeout=300)
+2026-10-04T02:23:48: ^^
+2026-10-04T02:23:48:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 337, in main
+2026-10-04T02:23:48:     # only treat as bf16 if user didn't pass an explicit non-default via env; keep simple
+2026-10-04T02:23:48: ^^^^
+2026-10-04T02:23:48:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 220, in train_offline
+2026-10-04T02:23:48:     loss.backward()
+2026-10-04T02:23:48:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/_tensor.py", line 631, in backward
+2026-10-04T02:23:48:     torch.autograd.backward(
+2026-10-04T02:23:48: 
+2026-10-04T02:23:48:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/autograd/__init__.py", line 381, in backward
+2026-10-04T02:23:48:     _engine_run_backward(
+2026-10-04T02:23:48:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/torch/autograd/graph.py", line 869, in _engine_run_backward
+2026-10-04T02:23:48:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-10-04T02:23:48:        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:23:48: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:23:48: KeyboardInterrupt
+2026-10-04T02:26:41: Loading weights:   0%|          | 0/1047 [00:00<?, ?it/s]
+2026-10-04T02:26:42: Loading weights:   0%|          | 1/1047 [00:00<02:16,  7.66it/s]
+2026-10-04T02:26:42: Loading weights:   0%|          | 3/1047 [00:00<01:26, 12.02it/s]
+2026-10-04T02:26:42: Loading weights:   2%|▏         | 25/1047 [00:00<00:12, 79.18it/s]
+2026-10-04T02:26:42: Loading weights:   4%|▍         | 47/1047 [00:00<00:09, 107.82it/s]
+2026-10-04T02:26:42: Loading weights:   7%|▋         | 69/1047 [00:00<00:07, 123.64it/s]
+2026-10-04T02:26:42: Loading weights:   9%|▊         | 91/1047 [00:00<00:07, 133.17it/s]
+2026-10-04T02:26:42: Loading weights:  11%|█         | 113/1047 [00:00<00:06, 137.62it/s]
+2026-10-04T02:26:43: Loading weights:  13%|█▎        | 134/1047 [00:01<00:06, 138.12it/s]
+2026-10-04T02:26:43: Loading weights:  15%|█▍        | 156/1047 [00:01<00:06, 141.23it/s]
+2026-10-04T02:26:43: Loading weights:  17%|█▋        | 178/1047 [00:01<00:06, 144.34it/s]
+2026-10-04T02:26:43: Loading weights:  19%|█▉        | 200/1047 [00:01<00:05, 146.71it/s]
+2026-10-04T02:26:43: Loading weights:  21%|██        | 222/1047 [00:01<00:05, 146.52it/s]
+2026-10-04T02:26:43: Loading weights:  23%|██▎       | 244/1047 [00:01<00:05, 145.70it/s]
+2026-10-04T02:26:44: Loading weights:  25%|██▌       | 265/1047 [00:02<00:05, 144.11it/s]
+2026-10-04T02:26:44: Loading weights:  27%|██▋       | 287/1047 [00:02<00:05, 145.62it/s]
+2026-10-04T02:26:44: Loading weights:  30%|██▉       | 309/1047 [00:02<00:05, 146.67it/s]
+2026-10-04T02:26:44: Loading weights:  32%|███▏      | 331/1047 [00:02<00:04, 147.14it/s]
+2026-10-04T02:26:44: Loading weights:  34%|███▎      | 353/1047 [00:02<00:04, 148.53it/s]
+2026-10-04T02:26:44: Loading weights:  36%|███▌      | 375/1047 [00:02<00:04, 147.26it/s]
+2026-10-04T02:26:44: Loading weights:  38%|███▊      | 396/1047 [00:02<00:04, 145.76it/s]
+2026-10-04T02:26:45: Loading weights:  40%|███▉      | 418/1047 [00:03<00:04, 146.83it/s]
+2026-10-04T02:26:45: Loading weights:  42%|████▏     | 440/1047 [00:03<00:04, 148.77it/s]
+2026-10-04T02:26:45: Loading weights:  44%|████▍     | 462/1047 [00:03<00:03, 150.24it/s]
+2026-10-04T02:26:45: Loading weights:  46%|████▌     | 484/1047 [00:03<00:03, 150.97it/s]
+2026-10-04T02:26:45: Loading weights:  48%|████▊     | 506/1047 [00:03<00:03, 149.57it/s]
+2026-10-04T02:26:45: Loading weights:  50%|█████     | 527/1047 [00:03<00:03, 147.81it/s]
+2026-10-04T02:26:45: Loading weights:  52%|█████▏    | 549/1047 [00:03<00:03, 148.09it/s]
+2026-10-04T02:26:46: Loading weights:  55%|█████▍    | 571/1047 [00:04<00:03, 148.41it/s]
+2026-10-04T02:26:46: Loading weights:  57%|█████▋    | 593/1047 [00:04<00:03, 149.17it/s]
+2026-10-04T02:26:46: Loading weights:  59%|█████▊    | 615/1047 [00:04<00:02, 149.73it/s]
+2026-10-04T02:26:46: Loading weights:  61%|██████    | 637/1047 [00:04<00:02, 150.29it/s]
+2026-10-04T02:26:46: Loading weights:  71%|███████   | 742/1047 [00:04<00:00, 354.42it/s]
+2026-10-04T02:26:46: Loading weights:  79%|███████▉  | 831/1047 [00:04<00:00, 484.95it/s]
+2026-10-04T02:26:46: Loading weights:  88%|████████▊ | 922/1047 [00:04<00:00, 593.71it/s]
+2026-10-04T02:26:46: Loading weights:  97%|█████████▋| 1016/1047 [00:04<00:00, 686.88it/s]
+2026-10-04T02:26:46: Loading weights: 100%|██████████| 1047/1047 [00:04<00:00, 210.63it/s]
+2026-10-04T02:26:47: Traceback (most recent call last):
+2026-10-04T02:26:47:   File "<frozen runpy>", line 198, in _run_module_as_main
+2026-10-04T02:26:47:   File "<frozen runpy>", line 88, in _run_code
+2026-10-04T02:26:47:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 364, in <module>
+2026-10-04T02:26:47:     main()
+2026-10-04T02:26:47:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 346, in main
+2026-10-04T02:26:47:     train_offline(args)
+2026-10-04T02:26:47:   File "/workspace/opentype-miner/src/opentype_miner/train/read_slot.py", line 137, in train_offline
+2026-10-04T02:26:47:     model = load_diffusion_gemma(
+2026-10-04T02:26:47:             ^^^^^^^^^^^^^^^^^^^^^
+2026-10-04T02:26:47:   File "/workspace/opentype-miner/src/opentype_miner/train/model_load.py", line 73, in load_diffusion_gemma
+2026-10-04T02:26:47:     model = prepare_model_for_kbit_training(
+2026-10-04T02:26:47: ^^^^^^^^^^^^^
+2026-10-04T02:26:47:   File "/workspace/opentype-miner/.venv/lib/python3.12/site-packages/peft/utils/other.py", line 209, in prepare_model_for_kbit_training
+2026-10-04T02:26:47:     param.data = param.data.to(torch.float32)
+2026-10-04T02:26:47: ^^^^^^^^^^^^
+2026-10-04T02:26:47: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 1.89 GiB. GPU 0 has a total capacity of 94.97 GiB of which 1.12 GiB is free. Including non-PyTorch memory, this process has 93.44 GiB memory in use. Of the allocated memory 91.61 GiB is allocated by PyTorch, and 1.17 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)
+2026-10-04T02:30:16: Loading weights:   0%|          | 0/1047 [00:00<?, ?it/s]
+2026-10-04T02:30:17: Loading weights:   0%|          | 1/1047 [00:00<02:15,  7.69it/s]
+2026-10-04T02:30:17: Loading weights:   0%|          | 3/1047 [00:00<01:27, 11.95it/s]
+2026-10-04T02:30:17: Loading weights:   2%|▏         | 25/1047 [00:00<00:13, 78.06it/s]
+2026-10-04T02:30:17: Loading weights:   4%|▍         | 47/1047 [00:00<00:09, 105.64it/s]
+2026-10-04T02:30:17: Loading weights:   7%|▋         | 69/1047 [00:00<00:08, 121.54it/s]
+2026-10-04T02:30:17: Loading weights:   9%|▊         | 91/1047 [00:00<00:07, 131.05it/s]
+2026-10-04T02:30:17: Loading weights:  11%|█         | 113/1047 [00:01<00:06, 135.50it/s]
+2026-10-04T02:30:18: Loading weights:  13%|█▎        | 134/1047 [00:01<00:06, 136.44it/s]
+2026-10-04T02:30:18: Loading weights:  15%|█▍        | 156/1047 [00:01<00:06, 139.46it/s]
+2026-10-04T02:30:18: Loading weights:  17%|█▋        | 178/1047 [00:01<00:06, 142.61it/s]
+2026-10-04T02:30:18: Loading weights:  19%|█▉        | 200/1047 [00:01<00:05, 144.83it/s]
+2026-10-04T02:30:18: Loading weights:  21%|██        | 222/1047 [00:01<00:05, 144.35it/s]
+2026-10-04T02:30:18: Loading weights:  23%|██▎       | 244/1047 [00:01<00:05, 144.02it/s]
+2026-10-04T02:30:18: Loading weights:  25%|██▌       | 265/1047 [00:02<00:05, 142.79it/s]
+2026-10-04T02:30:19: Loading weights:  27%|██▋       | 287/1047 [00:02<00:05, 144.08it/s]
+2026-10-04T02:30:19: Loading weights:  30%|██▉       | 309/1047 [00:02<00:05, 145.22it/s]
+2026-10-04T02:30:19: Loading weights:  32%|███▏      | 331/1047 [00:02<00:04, 145.76it/s]
+2026-10-04T02:30:19: Loading weights:  34%|███▎      | 353/1047 [00:02<00:04, 146.43it/s]
+2026-10-04T02:30:19: Loading weights:  36%|███▌      | 375/1047 [00:02<00:04, 144.79it/s]
+2026-10-04T02:30:19: Loading weights:  38%|███▊      | 396/1047 [00:02<00:04, 142.78it/s]
+2026-10-04T02:30:20: Loading weights:  40%|███▉      | 418/1047 [00:03<00:04, 143.69it/s]
+2026-10-04T02:30:20: Loading weights:  42%|████▏     | 440/1047 [00:03<00:04, 145.49it/s]
+2026-10-04T02:30:20: Loading weights:  44%|████▍     | 462/1047 [00:03<00:03, 146.58it/s]
+2026-10-04T02:30:20: Loading weights:  46%|████▌     | 484/1047 [00:03<00:03, 147.26it/s]
+2026-10-04T02:30:20: Loading weights:  48%|████▊     | 506/1047 [00:03<00:03, 146.44it/s]
+2026-10-04T02:30:20: Loading weights:  50%|█████     | 527/1047 [00:03<00:03, 144.63it/s]
+2026-10-04T02:30:20: Loading weights:  52%|█████▏    | 549/1047 [00:04<00:03, 146.12it/s]
+2026-10-04T02:30:21: Loading weights:  55%|█████▍    | 571/1047 [00:04<00:03, 146.53it/s]
+2026-10-04T02:30:21: Loading weights:  57%|█████▋    | 593/1047 [00:04<00:03, 146.99it/s]
+2026-10-04T02:30:21: Loading weights:  59%|█████▊    | 615/1047 [00:04<00:02, 146.88it/s]
+2026-10-04T02:30:21: Loading weights:  61%|██████    | 637/1047 [00:04<00:02, 147.14it/s]
+2026-10-04T02:30:21: Loading weights:  70%|███████   | 733/1047 [00:04<00:00, 327.75it/s]
+2026-10-04T02:30:21: Loading weights:  87%|████████▋ | 909/1047 [00:04<00:00, 672.71it/s]
+2026-10-04T02:30:21: Loading weights: 100%|██████████| 1047/1047 [00:04<00:00, 214.05it/s]
+2026-10-04T02:30:45: /workspace/opentype-miner/src/opentype_miner/train/read_slot.py:225: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+2026-10-04T02:30:45: Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+2026-10-04T02:30:45:   print(f"epoch={epoch} step={step} loss={float(loss):.4f}", flush=True)

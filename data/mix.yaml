@@ -1,0 +1,50 @@
+# Closed-loop mix. Shares are relative within a bucket; bucket_share is GPU-time intent.
+# Re-fit after each sim: upsample high challenger loss / high champ–challenger gap.
+
+version: 1
+seed: 1
+
+buckets:
+  harness:
+    share: 0.42
+    tracks:
+      ops: {weight: 0.40, levels: [1, 2, 3, 4]}
+      sql: {weight: 0.30, levels: [1, 2, 3, 4]}
+      paint: {weight: 0.30, levels: [1, 2]}  # public spec; depict stays in private_proxy polish
+  longctx:
+    share: 0.25
+    levels: [1, 2, 3]  # ship mid-length first; add 4/5 after packing works
+  decisions:
+    share: 0.28
+    # Soft calib on active ladder + frontier + ~10% retired replay
+    active_share: 0.90
+    retired_share: 0.10
+    levels: [1, 2, 3, 4, 5, 6, 7, 8]
+    sealed_share: 0.30
+    prose_share: 0.50
+  depict:
+    share: 0.05
+    # Private bank depict only; never overfit public paint templates
+
+sources:
+  public: data/public
+  closed: data/closed
+  synth: data/synth
+  on_policy: data/on_policy
+  private_proxy: data/private_proxy  # eval-only; never train
+
+active_learning:
+  # After each sim, upsample cases with:
+  # - high challenger loss, or
+  # - high (challenger_loss - champion_loss)
+  top_loss_frac: 0.15
+  gap_frac: 0.10
+  min_upsample: 2.0
+  max_upsample: 8.0
+
+ship_gate:
+  # Official crown is -ln 0.95; keep a margin target for both halves.
+  g_lcb_min: 0.07257   # -ln 0.93
+  official_g_min: 0.05129  # -ln 0.95
+  require_gain_tracks: 2
+  private_proxy_max_gap: 0.05
