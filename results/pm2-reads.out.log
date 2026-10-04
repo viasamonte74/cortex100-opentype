@@ -128,3 +128,15 @@
 2026-10-04T03:02:18: epoch=0 step=1740 loss=0.0017
 2026-10-04T03:02:40: epoch=0 step=1760 loss=0.8880
 2026-10-04T03:03:01: epoch=0 step=1780 loss=0.0028
+2026-10-04T03:03:24: epoch=0 step=1800 loss=0.0166
+2026-10-04T03:03:46: epoch=0 step=1820 loss=0.0086
+2026-10-04T03:04:08: epoch=0 step=1840 loss=0.0411
+2026-10-04T03:04:30: epoch=0 step=1860 loss=0.5202
+2026-10-04T03:04:52: epoch=0 step=1880 loss=0.3328
+2026-10-04T03:05:14: epoch=0 step=1900 loss=0.0045
+2026-10-04T03:05:36: epoch=0 step=1920 loss=0.0013
+2026-10-04T03:05:58: epoch=0 step=1940 loss=0.0003
+2026-10-04T03:06:19: epoch=0 step=1960 loss=0.0274
+2026-10-04T03:06:41: epoch=0 step=1980 loss=1.5924
+2026-10-04T03:07:02: epoch=0 step=2000 loss=0.5168
+2026-10-04T03:07:03: saved adapter → adapters/reads_lora

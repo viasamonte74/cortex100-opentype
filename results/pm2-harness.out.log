@@ -1,0 +1,12 @@
+2026-10-04T03:23:59: loading google/diffusiongemma-26B-A4B-it@f7f5b7f5fa82ffc52addd066915886d497f5517b via DiffusionGemmaForBlockDiffusion
+2026-10-04T03:23:59: tokenizer google/diffusiongemma-26B-A4B-it@f7f5b7f5fa82ffc52addd066915886d497f5517b (serve parity)
+2026-10-04T03:24:02: quantize=4bit
+2026-10-04T03:33:13: gradient checkpointing: on
+2026-10-04T03:33:13: LoRA attached: trainable=18,585,600 / total=25,558,907,952
+2026-10-04T03:33:35: epoch=0 step=20 loss=0.2189
+2026-10-04T03:33:56: epoch=0 step=40 loss=1.5190
+2026-10-04T03:34:17: epoch=0 step=60 loss=0.0196
+2026-10-04T03:34:37: epoch=0 step=80 loss=2.0948
+2026-10-04T03:34:57: epoch=0 step=100 loss=0.1143
+2026-10-04T03:35:17: epoch=0 step=120 loss=0.0333
+2026-10-04T03:35:37: epoch=0 step=140 loss=0.0000

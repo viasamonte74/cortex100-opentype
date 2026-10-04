@@ -63,15 +63,18 @@ def train(args: argparse.Namespace) -> None:
     from opentype_miner.train.diffusion_loss import corrupt_uniform, diffusion_ce
 
     class ChatDS(Dataset):
-        def __init__(self, rows: list[dict[str, Any]], tokenizer):
+        def __init__(self, rows: list[dict[str, Any]], tokenizer, max_prompt_len: int = 2048):
             self.rows = rows
             self.tok = tokenizer
+            self.max_prompt_len = max_prompt_len
 
         def __len__(self) -> int:
             return len(self.rows)
 
         def __getitem__(self, i: int) -> dict[str, torch.Tensor]:
             prompt, resp = split_prompt_canvas(self.tok, self.rows[i]["messages"])
+            if self.max_prompt_len and len(prompt) > self.max_prompt_len:
+                prompt = prompt[-self.max_prompt_len :]
             canvas = pad_canvas(resp, CANVAS, self.tok.pad_token_id or 0)
             # supervise only real response tokens (not pad)
             mask = [1] * min(len(resp), CANVAS) + [0] * max(0, CANVAS - len(resp))
@@ -122,13 +125,15 @@ def train(args: argparse.Namespace) -> None:
         revision,
         device_map=args.device_map,
         freeze_vision=bool(args.freeze_vision),
+        quantize=getattr(args, "quantize", "4bit"),
+        gradient_checkpointing=bool(getattr(args, "gradient_checkpointing", True)),
     )
     model = attach_lora(
         model, r=args.lora_r, alpha=args.lora_alpha, dropout=args.lora_dropout
     )
     model.train()
     device = next(model.parameters()).device
-    ds = ChatDS(rows, tokenizer)
+    ds = ChatDS(rows, tokenizer, max_prompt_len=int(getattr(args, "max_prompt_len", 2048) or 0))
     dl = DataLoader(ds, batch_size=args.batch_size, shuffle=True, collate_fn=collate)
     opt = torch.optim.AdamW(
         (p for p in model.parameters() if p.requires_grad),
@@ -205,6 +210,10 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--eps", type=float, default=0.001)
     p.add_argument("--freeze-vision", action="store_true", default=True)
     p.add_argument("--log-every", type=int, default=20)
+    p.add_argument("--quantize", choices=["4bit", "8bit", "bf16"], default="4bit")
+    p.add_argument("--gradient-checkpointing", action="store_true", default=True)
+    p.add_argument("--no-gradient-checkpointing", action="store_false", dest="gradient_checkpointing")
+    p.add_argument("--max-prompt-len", type=int, default=2048)
     p.add_argument("--config", type=Path)
     args = p.parse_args(argv)
     if args.config and args.config.exists():
